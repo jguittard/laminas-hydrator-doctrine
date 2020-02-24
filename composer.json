@@ -1,0 +1,62 @@
+{
+  "name": "laminas/laminas-hydrator-doctrine",
+  "description": "Doctrine implementation for Laminas Hydrator",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "laminas",
+    "hydrator",
+    "doctrine"
+  ],
+  "homepage": "https://laminas.dev",
+  "support": {
+    "docs": "https://docs.laminas.dev/laminas-hydrator-doctrine/",
+    "issues": "https://github.com/laminas/laminas-hydrator-doctrine/issues",
+    "source": "https://github.com/laminas/laminas-hydrator-doctrine",
+    "rss": "https://github.com/laminas/laminas-hydrator-doctrine/releases.atom",
+    "chat": "https://laminas.dev/chat",
+    "forum": "https://discourse.laminas.dev"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev",
+      "dev-develop": "1.1.x-dev"
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "doctrine/orm": "^2.7.1",
+    "laminas/laminas-hydrator": "^3.0.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5.20 || ^8.5.2",
+    "psr/container": "^1.0",
+    "laminas/laminas-coding-standard": "~1.0.0"
+  },
+  "suggest": {
+    "laminas/laminas-validator-doctrine": "Laminas Doctrine Validators"
+  },
+  "autoload": {
+    "psr-4": {
+      "Laminas\\Hydrator\\Doctrine\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LaminasTest\\Hydrator\\Doctrine\\": "test/"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": "phpunit --colors=always",
+    "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+  }
+}
